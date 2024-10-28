@@ -98,13 +98,22 @@ img {
     border-radius: 5px;
     box-shadow: 0px 15px 20px rgba(13,113,130,0.15);
     padding: 32px 40px;
-    margin-bottom: 24px;
     position: relative;
 }
+
+.job-list-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
 .item-hero {
     display: flex;
     align-items: center;
 }
+
+.item-hero-info {
+    margin-right: 20px;
+}
+
 .item-logo-img {
     width: 88px;
     height: 88px;
@@ -191,4 +200,80 @@ img {
 
 .features-item:not(:last-child) {
     margin-right: 24px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .job-list-item {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .item-hero {
+        margin-bottom: 20px;
+    }
+
+    .item-hero-info {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .job-list-section {
+        padding-bottom: 34px;
+    }
+
+    .item-hero {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .item-logo-img {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        margin-right: 0;
+        top: 0;
+        transform: translateY(-50%);
+        left: 24px;
+    }
+
+    .features {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .features-item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .job-list-item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    .item-hero-info {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #B7C4C4;
+    }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .job-list-item {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .developer-level {
+        font-size: 15px;
+    }
+
+    .time-localtion {
+        font-size: 13px;
+    }
 }
